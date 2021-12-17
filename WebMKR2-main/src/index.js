@@ -47,7 +47,7 @@ let Photos = [{
             likes: 1000
         }
     ]
-   // вивести топ н фото по к-ті лайків
+   // вивести топ 3 фото по к-ті лайків
     app.get("/photo/top", (req, res) => {
 
    
@@ -71,10 +71,23 @@ let Photos = [{
    
     
 
-      res.send(arr.slice(0,3));//виводить [42400,4242,1000] топ 3 значення лайків
+     
+     
+      console.log(arr);
 
-      //не можу придумати спосіб щоб порівнювати обєкти в масиві по к-ті лайків
+      let arr1 = [];
+
+
+      for(let i = 0;i<Photos.length;i++){
+          if(Photos[i].likes == arr[0] || Photos[i].likes == arr[1] || Photos[i].likes == arr[2]){
+              arr1.push(Photos[i])
+          }
+      }
+
+      res.send(arr1);
       
+      
+       
        
 
        
