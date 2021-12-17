@@ -1,0 +1,21 @@
+{
+    "name": "mkr2",
+    "version": "1.0.0",
+    "description": "9 variant",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest",
+        "start": "nodemon src/index.js"
+    },
+  
+    "license": "ISC",
+    "dependencies": {
+        "ejs": "^3.1.6",
+        "express": "^4.17.1",
+        "jest": "^27.4.5",
+        "supertest": "^6.1.6"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.15"
+    }
+}
